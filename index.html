@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Apollinaria (Poli) Nemkova – AI Researcher & Humanitarian NLP</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Apollinaria (Poli) Nemkova – AI researcher working on humanitarian NLP, conflict forecasting, and AI governance." />
+  <style>
+    /* --------- Base styles --------- */
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: "Garamond", "Cormorant Garamond", Georgia, "Times New Roman", serif;
+      background: #faf8f5;
+      color: #151515;
+      line-height: 1.65;
+      font-size: 17px;
+    }
+
+    a {
+      color: #0b1728;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* --------- Layout --------- */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: rgba(250, 248, 245, 0.96);
+      backdrop-filter: blur(6px);
+      border-bottom: 1px solid #e4ded2;
+    }
+
+    .nav-inner {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 0.75rem 1.25rem;
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .nav-title {
+      font-size: 1.05rem;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+      color: #111827;
+      white-space: nowrap;
+    }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      font-size: 0.9rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .nav-links a {
+      color: #444;
+    }
+
+    .nav-links a:hover {
+      color: #111827;
+    }
+
+    .hero {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 3rem 1.25rem 2.5rem;
+      display: grid;
+      grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+      gap: 2.5rem;
+      align-items: center;
+    }
+
+    .hero h1 {
+      margin: 0 0 0.35rem;
+      font-size: 2.35rem;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .hero-subtitle {
+      margin: 0 0 1rem;
+      font-size: 1.1rem;
+      color: #444;
+    }
+
+    .hero p {
+      margin: 0 0 1.5rem;
+      max-width: 38rem;
+    }
+
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 0.55rem 1.4rem;
+      border-radius: 999px;
+      font-size: 0.9rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      border: 1px solid #c9b083;
+      background: transparent;
+      color: #111827;
+    }
+
+    .btn-primary {
+      background: #111827;
+      color: #fdfaf5;
+      border-color: #111827;
+    }
+
+    .btn:hover {
+      text-decoration: none;
+      filter: brightness(1.04);
+    }
+
+    .hero-image-wrapper {
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    .hero img {
+      max-width: 260px;
+      width: 100%;
+      border-radius: 18px;
+      border: 1px solid #e2d7c5;
+      box-shadow: 0 10px 28px rgba(0, 0, 0, 0.05);
+      object-fit: cover;
+    }
+
+    main {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 0 1.25rem 3.5rem;
+    }
+
+    section {
+      padding: 2rem 0 1.75rem;
+      border-top: 1px solid #e6ddcf;
+    }
+
+    section:first-of-type {
+      border-top: none;
+    }
+
+    section h2 {
+      margin: 0 0 0.5rem;
+      font-size: 1.35rem;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    section p {
+      margin: 0 0 0.75rem;
+      max-width: 48rem;
+    }
+
+    .two-col {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1.2fr);
+      gap: 1.75rem;
+      margin-top: 1rem;
+    }
+
+    .subheading {
+      font-weight: 600;
+      margin-bottom: 0.15rem;
+    }
+
+    ul {
+      padding-left: 1.2rem;
+      margin: 0.25rem 0 0.75rem;
+    }
+
+    li {
+      margin-bottom: 0.3rem;
+    }
+
+    .meta-note {
+      font-size: 0.9rem;
+      color: #666;
+    }
+
+    /* --------- Footer --------- */
+    footer {
+      border-top: 1px solid #e6ddcf;
+      padding: 1.5rem 1.25rem 2rem;
+      text-align: center;
+      font-size: 0.85rem;
+      color: #777;
+    }
+
+    /* --------- Responsive --------- */
+    @media (max-width: 860px) {
+      .hero {
+        grid-template-columns: minmax(0, 1fr);
+        padding-top: 2.5rem;
+      }
+      .hero-image-wrapper {
+        justify-content: flex-start;
+      }
+      .hero img {
+        max-width: 220px;
+      }
+      .two-col {
+        grid-template-columns: minmax(0, 1fr);
+      }
+      .nav-inner {
+        justify-content: center;
+        text-align: center;
+      }
+      .nav-title {
+        width: 100%;
+        text-align: center;
+      }
+      .nav-links {
+        justify-content: center;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero h1 {
+        font-size: 1.8rem;
+      }
+      .hero-subtitle {
+        font-size: 1rem;
+      }
+      body {
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <header>
+    <div class="nav-inner">
+      <div class="nav-title">Apollinaria (Poli) Nemkova</div>
+      <nav class="nav-links">
+        <a href="#about">About</a>
+        <a href="#research">Research</a>
+        <a href="#impact">NGO / Impact</a>
+        <a href="#teaching">Teaching</a>
+        <a href="#publications">Publications</a>
+        <a href="#talks">Talks</a>
+        <a href="#thoughts">Thoughts</a>
+        <a href="#work-with-me">Work with me</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero" id="top">
+    <div>
+      <h1>Apollinaria (Poli) Nemkova</h1>
+      <p class="hero-subtitle">
+        AI researcher at the intersection of humanitarian action and public policy.
+      </p>
+      <p>
+        I work on natural language processing for conflict forecasting, human rights, and crisis response.
+        My research focuses on multilingual, high-stakes settings where AI systems must be both rigorous
+        and responsible. I collaborate with international organizations and NGOs to translate research
+        into practice: from analyzing open-source crisis data to designing responsible AI workflows for
+        field practitioners.
+      </p>
+      <div class="hero-buttons">
+        <a href="CV.pdf" class="btn btn-primary">Download CV</a>
+        <a href="#work-with-me" class="btn">Work with me</a>
+      </div>
+    </div>
+    <div class="hero-image-wrapper">
+      <!-- Replace profile.jpg with your actual image file name, or remove this block if no image yet -->
+      <img src="profile.jpg" alt="Portrait of Apollinaria (Poli) Nemkova" />
+    </div>
+  </section>
+
+  <main>
+    <!-- About -->
+    <section id="about">
+      <h2>About</h2>
+      <p>
+        I am an AI researcher working on natural language processing for humanitarian action, conflict
+        forecasting, and human rights. My work sits at the intersection of machine learning, public
+        policy, and global governance, with a focus on making AI systems useful and safe in high-stakes,
+        low-resource settings.
+      </p>
+      <p>
+        I care deeply about:
+      </p>
+      <ul>
+        <li>Human rights and protection of civilians</li>
+        <li>Multilingual and low-resource NLP</li>
+        <li>Responsible and transparent AI systems</li>
+        <li>Bridging research, policy, and practice</li>
+      </ul>
+      <p>
+        Over time, my goal is to help shape institutions, tools, and norms that make AI a stabilizing force
+        rather than a source of new risks.
+      </p>
+    </section>
+
+    <!-- Research -->
+    <section id="research">
+      <h2>Research</h2>
+      <p>
+        My research focuses on NLP methods for high-stakes, real-world applications in conflict, human rights,
+        and governance.
+      </p>
+      <div class="two-col">
+        <div>
+          <p class="subheading">Human Rights &amp; Atrocity Monitoring</p>
+          <p>
+            Detecting and classifying references to human rights violations and attacks on civilians in
+            social media and open-source text, with a focus on under-resourced and politically sensitive
+            languages.
+          </p>
+
+          <p class="subheading">Conflict Forecasting &amp; Crisis Analytics</p>
+          <p>
+            Using news, social media, and event data to support early warning for conflict escalation,
+            protests, and political violence, combining statistical models, NLP features, and large language
+            models.
+          </p>
+        </div>
+        <div>
+          <p class="subheading">Multilingual &amp; Low-Resource NLP</p>
+          <p>
+            Evaluating and adapting language models for settings where data is scarce, noisy, or
+            politically contested, including cross-lingual transfer and robustness for under-represented
+            communities.
+          </p>
+
+          <p class="subheading">Evaluation &amp; Governance of AI Systems</p>
+          <p>
+            Designing evaluation setups for large language models in socially sensitive domains, including
+            calibration, error analysis, and alignment with humanitarian principles and governance norms.
+          </p>
+        </div>
+      </div>
+      <p class="meta-note">
+        For a full list of ongoing and past projects, see <a href="#publications">Publications</a> and
+        <a href="#thoughts">Thoughts</a>.
+      </p>
+    </section>
+
+    <!-- NGO / Impact -->
+    <section id="impact">
+      <h2>NGO &amp; Impact</h2>
+      <p>
+        I am in the process of founding a nonprofit initiative that helps humanitarian organizations and
+        social-impact institutions use AI responsibly and effectively.
+      </p>
+      <p>
+        The focus areas include:
+      </p>
+      <ul>
+        <li>Crisis monitoring and early-warning dashboards</li>
+        <li>Human rights and protection-of-civilians monitoring</li>
+        <li>Capacity building for NGOs on AI tools and data workflows</li>
+        <li>Guidance on responsible and safe AI use in the field</li>
+      </ul>
+      <p>
+        The goal is to make advanced AI methods accessible to practitioners working on peace, resilience,
+        and human rights — without compromising ethics, safety, or local context.
+      </p>
+      <p class="meta-note">
+        A formal launch and more information will follow. If you are interested in collaborating or supporting
+        this work, please reach out via <a href="#contact">Contact</a> or <a href="#work-with-me">Work with me</a>.
+      </p>
+    </section>
+
+    <!-- Teaching -->
+    <section id="teaching">
+      <h2>Teaching</h2>
+      <p>
+        I enjoy teaching and mentoring at the intersection of computer science, data science, and real-world impact.
+      </p>
+      <ul>
+        <li>
+          <strong>Big Data &amp; Data Science</strong> – project-based learning using real-world datasets,
+          with an emphasis on reproducibility and critical thinking.
+        </li>
+        <li>
+          <strong>Senior Design / Capstone Projects</strong> – mentoring student teams on AI projects,
+          often with social-impact themes and real stakeholders.
+        </li>
+        <li>
+          <strong>Introduction to Artificial Intelligence</strong> – foundations of AI alongside
+          discussion of responsible deployment and societal implications.
+        </li>
+      </ul>
+      <p>
+        My teaching philosophy emphasizes curiosity, hands-on experimentation, and an honest examination of both
+        the power and the limitations of AI systems.
+      </p>
+    </section>
+
+    <!-- Publications -->
+    <section id="publications">
+      <h2>Publications</h2>
+      <p>
+        Selected work related to humanitarian NLP, conflict forecasting, and AI for social good.
+      </p>
+      <ul>
+        <li>
+          <strong>Detecting Human Rights Violations on Social Media during the Russia–Ukraine War</strong><br />
+          A. Nemkova et al., [Venue / Year]<br />
+          <span class="meta-note">[Add: <a href="#">PDF</a> · <a href="#">Code</a> · <a href="#">Data</a>]</span>
+        </li>
+        <li>
+          <strong>[Paper Title]</strong><br />
+          [Authors], [Venue / Year]<br />
+          <span class="meta-note">[Add: <a href="#">PDF</a> · <a href="#">Code</a>]</span>
+        </li>
+      </ul>
+      <p class="meta-note">
+        Full list of publications is available on my
+        <a href="https://scholar.google.com" target="_blank" rel="noopener noreferrer">Google Scholar profile</a>
+        and in my CV.
+      </p>
+    </section>
+
+    <!-- Talks -->
+    <section id="talks">
+      <h2>Talks</h2>
+      <p>
+        I speak about AI for humanitarian action, conflict forecasting, and the responsible deployment of
+        language models.
+      </p>
+      <ul>
+        <li>
+          <strong>[Talk Title]</strong> — [Event / Institution], [Year].<br />
+          <span class="meta-note">Short description of the talk or panel.</span>
+        </li>
+        <li>
+          <strong>[Talk Title]</strong> — [Workshop / Conference], [Year].<br />
+          <span class="meta-note">Short description of the topic.</span>
+        </li>
+      </ul>
+      <p class="meta-note">
+        I am available for invited talks, guest lectures, and panels on:
+        humanitarian NLP, AI in conflict and crisis settings, and AI governance for high-risk applications.
+      </p>
+    </section>
+
+    <!-- Thoughts -->
+    <section id="thoughts">
+      <h2>Thoughts</h2>
+      <p>
+        Occasional essays and notes on AI, conflict, human rights, and doing research in high-stakes domains.
+      </p>
+      <ul>
+        <li>
+          <strong>Why AI Needs a Humanitarian Imagination</strong><br />
+          <span class="meta-note">On why “AI for good” must move beyond slogans and into institutions, data, and accountability.</span>
+        </li>
+        <li>
+          <strong>What Language Models Miss in Crisis Settings</strong><br />
+          <span class="meta-note">Reflections on failure modes of LLMs in noisy, multilingual, politically sensitive contexts.</span>
+        </li>
+      </ul>
+      <p class="meta-note">
+        Longer essays may appear on dedicated platforms such as Medium or organizational blogs; links will be added here.
+      </p>
+    </section>
+
+    <!-- Work with me -->
+    <section id="work-with-me">
+      <h2>Work with me</h2>
+      <p>
+        I collaborate with researchers, NGOs, international organizations, and policy institutions on projects at
+        the intersection of AI, conflict, and human rights.
+      </p>
+      <ul>
+        <li>
+          <strong>Research collaborations</strong> in NLP, conflict forecasting, and evaluation of large language
+          models in high-risk domains.
+        </li>
+        <li>
+          <strong>Advising NGOs and international organizations</strong> on integrating AI into monitoring, analysis,
+          and decision-support workflows in a responsible way.
+        </li>
+        <li>
+          <strong>Talks, guest lectures, and training sessions</strong> on humanitarian NLP, responsible AI use, and
+          critical perspectives on AI in crisis and governance settings.
+        </li>
+        <li>
+          <strong>Early-stage initiative and NGO design</strong> related to AI for peace, human rights, and
+          governance.
+        </li>
+      </ul>
+      <p>
+        To discuss a project, invitation, or idea, please contact me using the details below.
+      </p>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>
+        For collaborations, speaking invitations, or media inquiries, you can reach me at:
+      </p>
+      <p>
+        <strong>poli@nemkova.com</strong>
+      </p>
+      <p>
+        You can also find me on:
+      </p>
+      <ul>
+        <li><a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+        <li><a href="https://x.com" target="_blank" rel="noopener noreferrer">Twitter / X</a></li>
+        <li><a href="https://scholar.google.com" target="_blank" rel="noopener noreferrer">Google Scholar</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    &copy; <span id="year"></span> Apollinaria Poli Nemkova. All rights reserved.
+  </footer>
+
+  <script>
+    // Auto-update year in footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
