@@ -31,7 +31,7 @@
     }
 
     a {
-      color: #374151;
+      color: #374151; /* dark grey */
       text-decoration: none;
     }
 
@@ -44,9 +44,9 @@
       position: sticky;
       top: 0;
       z-index: 20;
-      background: rgba(248, 250, 252, 0.96);
+      background: rgba(248, 250, 252, 0.96); /* softer, gallery-like */
       backdrop-filter: blur(10px);
-      border-bottom: 1px solid rgba(148, 163, 184, 0.4);
+      border-bottom: 1px solid rgba(148, 163, 184, 0.4); /* light grey border */
     }
 
     .nav-inner {
@@ -68,6 +68,24 @@
       color: #1f2937;
       white-space: nowrap;
     }
+    .nav-title a {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: #1f2937;          /* dark grey */
+      text-decoration: none;
+    }
+    
+    .nav-title a:hover {
+      opacity: 0.85;           /* tiny hover feedback */
+    }
+    
+    .nav-logo {
+      width: 18px;
+      height: 18px;
+      border-radius: 4px;      /* optional, can remove if you want a sharp square */
+      display: block;
+    }
 
     .nav-links {
       display: flex;
@@ -80,7 +98,7 @@
 
     .nav-links a {
       position: relative;
-      color: #9ca3af;  /* light grey default */
+      color: #9ca3af;  /* light grey by default */
       padding-bottom: 0.15rem;
     }
 
@@ -91,73 +109,45 @@
       bottom: 0;
       width: 0;
       height: 1px;
-      background: #4b5563;
+      background: #4b5563;  /* mid-grey underline */
       transition: width 0.25s ease;
     }
 
     .nav-links a:hover {
-      color: #4b5563;
+      color: #4b5563;  /* slightly darker on hover */
     }
 
     .nav-links a:hover::after {
       width: 100%;
     }
 
-    /* --------- Hero --------- */
     .hero {
       max-width: 1120px;
       margin: 0 auto;
       padding: 3.5rem 1.5rem 2.75rem;
-    }
-
-    .hero-inner {
       display: grid;
-      grid-template-columns: minmax(0, 3.2fr) minmax(0, 2.3fr);
+      grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
       gap: 2.5rem;
       align-items: center;
-      padding: 3.25rem 3rem;
-      border-radius: 32px;
-      border: 1px solid rgba(148, 163, 184, 0.35);
-      background: linear-gradient(135deg, #f9fafb 0%, #f3f4f6 55%, #eef2ff 100%);
-      box-shadow: 0 28px 60px rgba(15, 23, 42, 0.14);
     }
 
     .hero h1 {
       margin: 0 0 0.4rem;
       font-family: "Garamond", "Cormorant Garamond", Georgia, "Times New Roman", serif;
-      font-size: 2.7rem;
+      font-size: 2.6rem;
       font-weight: 500;
-      letter-spacing: 0.14em;
+      letter-spacing: 0.12em;
       text-transform: uppercase;
       color: #1f2937;
     }
 
     .hero-subtitle {
-      margin: 0.2rem 0 0.7rem;
-      font-size: 0.92rem;
+      margin: 0 0 1.2rem;
+      font-size: 1rem;
       font-weight: 500;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: #6b7280;
-    }
-
-    .hero-tags {
-      margin: 0 0 1.5rem;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.4rem;
-    }
-
-    .hero-tags span {
-      font-size: 0.7rem;
       letter-spacing: 0.16em;
       text-transform: uppercase;
-      padding: 0.25rem 0.7rem;
-      border-radius: 999px;
-      border: 1px solid rgba(148, 163, 184, 0.8);
-      color: #4b5563;
-      background: rgba(255, 255, 255, 0.65);
-      backdrop-filter: blur(4px);
+      color: #6b7280;
     }
 
     .hero p {
@@ -183,8 +173,7 @@
       border: 1px solid #374151;
       background: transparent;
       color: #374151;
-      transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease,
-                  transform 0.15s ease;
+      transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
     }
 
     .btn-primary {
@@ -197,7 +186,6 @@
       background: #111827;
       border-color: #111827;
       color: #f9fafb;
-      transform: translateY(-1px);
     }
 
     .hero-image-wrapper {
@@ -206,8 +194,8 @@
     }
 
     .hero img {
-      max-width: 280px;
-      width: 100%;
+      max-width: 360px;
+      width: 120%;
       border-radius: 24px;
       border: 1px solid rgba(55, 65, 81, 0.15);
       box-shadow: 0 22px 55px rgba(15, 23, 42, 0.18);
@@ -215,7 +203,6 @@
       background: #e5e7eb;
     }
 
-    /* --------- Main content --------- */
     main {
       max-width: 1120px;
       margin: 0 auto;
@@ -223,7 +210,7 @@
     }
 
     section {
-      padding: 2.6rem 0 2.2rem;
+      padding: 2.3rem 0 2.1rem;
       border-top: 1px solid rgba(148, 163, 184, 0.4);
     }
 
@@ -232,25 +219,13 @@
     }
 
     section h2 {
-      position: relative;
-      margin: 0 0 1rem;
-      padding-top: 0.4rem;
+      margin: 0 0 0.85rem;
       font-family: "Garamond", "Cormorant Garamond", Georgia, "Times New Roman", serif;
       font-size: 1.35rem;
       font-weight: 500;
       letter-spacing: 0.20em;
       text-transform: uppercase;
       color: #1f2937;
-    }
-
-    section h2::before {
-      content: "";
-      position: absolute;
-      left: 0;
-      top: 0;
-      width: 46px;
-      height: 1px;
-      background: rgba(148, 163, 184, 0.9);
     }
 
     section p {
@@ -299,26 +274,18 @@
     /* --------- Responsive --------- */
     @media (max-width: 900px) {
       .hero {
+        grid-template-columns: minmax(0, 1fr);
         padding-top: 2.8rem;
       }
-
-      .hero-inner {
-        grid-template-columns: minmax(0, 1fr);
-        padding: 2.3rem 1.8rem;
-      }
-
       .hero-image-wrapper {
         justify-content: flex-start;
       }
-
       .hero img {
         max-width: 240px;
       }
-
       .two-col {
         grid-template-columns: minmax(0, 1fr);
       }
-
       .nav-inner {
         justify-content: center;
         text-align: center;
@@ -350,51 +317,50 @@
   <!-- Navigation -->
   <header>
     <div class="nav-inner">
-      <div class="nav-title">Apollinaria Poli Nemkova</div>
-      <nav class="nav-links">
-        <a href="#about">About</a>
-        <a href="#research">Research</a>
-        <a href="#teaching">Teaching</a>
-        <a href="#publications">Publications</a>
-        <a href="#impact">Impact</a>
-        <a href="#talks">Talks</a>
-        <a href="#work-with-me">Work with me</a>
-        <a href="#contact">Contact</a>
-      </nav>
+      <div class="nav-title">
+        <a href="#top">
+          <img src="favicon.jpeg" alt="" class="nav-logo" />
+          <span>Apollinaria Poli Nemkova</span>
+        </a>
+      </div>
+     <nav class="nav-links">
+      <a href="#about">About</a>
+      <a href="#research">Research</a>
+      <a href="#teaching">Teaching</a>
+      <a href="#publications">Publications</a>
+      <a href="#impact">Impact</a>
+      <a href="#talks">Talks</a>          <!-- ← add this line if you want -->
+      <a href="#work-with-me">Work with me</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
     </div>
   </header>
 
   <!-- Hero -->
   <section class="hero" id="top">
-    <div class="hero-inner">
-      <div>
-        <h1>Poli Nemkova</h1>
-        <p class="hero-subtitle">
-          AI &amp; NLP Research · Large Language Models · Multilingual Systems
-        </p>
-        <p class="hero-tags">
-          <span>AI Research</span>
-          <span>Multilingual NLP</span>
-          <span>Humanitarian &amp; Policy</span>
-        </p>
-        <p>
-          I work on the design and evaluation of AI and NLP systems, with a focus on large language models,
-          multilingual and low-resource settings, and how models behave in the wild. My current work spans
-          model evaluation, robustness, and representation learning for text.
-        </p>
-        <p>
-          Many of my projects live in high-stakes domains — humanitarian action, human rights, and governance —
-          where technical decisions intersect with real-world risk. I collaborate with international organizations
-          and NGOs to make advanced language technologies both useful and responsible.
-        </p>
-        <div class="hero-buttons">
-          <a href="https://docs.google.com/document/d/1cH9b_0k_TDv5G1tMst0K4S0JW9k9iBYYIdYP8wvmhaI/edit?usp=sharing" class="btn btn-primary">Download CV</a>
-          <a href="#work-with-me" class="btn">Work with me</a>
-        </div>
+    <div>
+      <h1>Poli Nemkova</h1>
+      <p class="hero-subtitle">
+        AI &amp; NLP Research · Large Language Models · Multilingual Systems
+      </p>
+      <p>
+        I work on the design and evaluation of AI and NLP systems, with a focus on large language models,
+        multilingual and low-resource settings, and how models behave in the wild. My current work spans
+        model evaluation, robustness, and representation learning for text.
+      </p>
+      <p>
+        Many of my projects live in high-stakes domains — humanitarian action, human rights, and governance —
+        where technical decisions intersect with real-world risk. I collaborate with international organizations
+        and NGOs to make advanced language technologies both useful and responsible.
+      </p>
+      <div class="hero-buttons">
+        <a href="https://docs.google.com/document/d/1cH9b_0k_TDv5G1tMst0K4S0JW9k9iBYYIdYP8wvmhaI/edit?usp=sharing" class="btn btn-primary">Download CV</a>
+        <a href="#work-with-me" class="btn">Work with me</a>
       </div>
-      <div class="hero-image-wrapper">
-        <img src="1.jpg" alt="Portrait of Apollinaria Poli Nemkova" />
-      </div>
+    </div>
+    <div class="hero-image-wrapper">
+      <img src="1.jpg" alt="Portrait of Apollinaria Poli Nemkova" />
     </div>
   </section>
 
@@ -649,6 +615,28 @@
       </p>
     </section>
 
+    <!-- Thoughts -->
+    <section id="thoughts">
+      <h2>Thoughts</h2>
+      <p>
+        Occasional essays and notes on AI, language models, research practice, and working with data in
+        high-stakes domains.
+      </p>
+      <ul>
+        <li>
+          <strong>Why AI Needs a Humanitarian Imagination</strong><br />
+          <span class="meta-note">On why “AI for good” needs concrete architectures, institutions, and constraints — not just slogans.</span>
+        </li>
+        <li>
+          <strong>What Language Models Miss in Crisis Settings</strong><br />
+          <span class="meta-note">Reflections on failure modes of LLMs in noisy, multilingual, politically sensitive contexts.</span>
+        </li>
+      </ul>
+      <p class="meta-note">
+        Longer essays may appear on platforms such as Medium or organizational blogs; links will be added here.
+      </p>
+    </section>
+    
     <!-- Talks -->
     <section id="talks">
       <h2>Talks</h2>
@@ -670,7 +658,9 @@
         </li>
         <li>
           <strong>AAAI 2025 – AI for Social Impact Track</strong><br />
-          <span class="meta-note">Two talks on AI for social impact across finance, social media, and crime prevention, February 2025.</span>
+          <span class="meta-note">
+            Two talks on AI for social impact across finance, social media, and crime prevention, February 2025.
+          </span>
         </li>
         <li>
           <strong>Towards Peace through AI Research</strong> — Conflict and Resilience Research Institute Canada (CRRIC), University of Winnipeg<br />
@@ -678,7 +668,9 @@
         </li>
         <li>
           <strong>Algorithms and AI as an Artistic Protocol</strong> — Performance at “Education as Experimentation 3” Symposium<br />
-          <span class="meta-note">Onstead Institute &amp; Department of Art Education, University of North Texas, October 2022.</span>
+          <span class="meta-note">
+            Onstead Institute &amp; Department of Art Education, University of North Texas, October 2022.
+          </span>
         </li>
         <li>
           <strong>AI in Media Warfare</strong> — CRRIC, University of Winnipeg<br />
@@ -689,28 +681,6 @@
           <span class="meta-note">January 2022.</span>
         </li>
       </ul>
-    </section>
-
-    <!-- Thoughts -->
-    <section id="thoughts">
-      <h2>Thoughts</h2>
-      <p>
-        Occasional essays and notes on AI, language models, research practice, and working with data in
-        high-stakes domains.
-      </p>
-      <ul>
-        <li>
-          <strong>Why AI Needs a Humanitarian Imagination</strong><br />
-          <span class="meta-note">On why “AI for good” needs concrete architectures, institutions, and constraints — not just slogans.</span>
-        </li>
-        <li>
-          <strong>What Language Models Miss in Crisis Settings</strong><br />
-          <span class="meta-note">Reflections on failure modes of LLMs in noisy, multilingual, politically sensitive contexts.</span>
-        </li>
-      </ul>
-      <p class="meta-note">
-        Longer essays may appear on platforms such as Medium or organizational blogs; links will be added here.
-      </p>
     </section>
 
     <!-- Service / Grants / Awards -->
